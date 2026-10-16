@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Midnight FM</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="noise"></div><div class="orb orb-a"></div><div class="orb orb-b"></div>
+<main class="app-shell">
+<header class="topbar">
+<div class="station"><span class="signal-dot"></span><span>MIDNIGHT FM</span><small>LIVE SESSION</small></div>
+<button class="queue-toggle" id="queueToggle">≡ QUEUE <b id="queueCount">20</b></button>
+</header>
+
+<section class="player-grid">
+<section class="hero">
+<div class="eyebrow"><span id="trackNumber">01</span> / <span id="trackTotal">20</span></div>
+<div class="record-wrap" id="recordWrap">
+<div class="record-shadow"></div><div class="record"><div class="record-grooves"></div>
+<div class="label"><span class="label-mark">MF</span><span class="label-line"></span><small id="labelYear">2026</small></div><div class="record-hole"></div></div>
+<div class="needle"><span class="needle-arm"></span><span class="needle-head"></span></div>
+</div>
+<div class="track-meta"><p class="kicker" id="trackKicker">NIGHT DRIVE / 01</p><h1 id="trackTitle">Afterglow<br><em>Transit</em></h1><p class="artist" id="trackArtist">The Paper Satellites</p></div>
+</section>
+
+<section class="console">
+<div class="now-playing"><div class="tiny-label">NOW PLAYING</div><div class="meter"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><div class="status"><span id="statusText">PAUSED</span><span>•</span><span id="statusClock">00:00</span></div></div>
+<div class="timeline"><span id="currentTime">00:00</span><input id="seekBar" type="range" min="0" max="100" value="0"><span id="duration">00:00</span></div>
+<div class="controls"><button id="shuffleBtn" class="control secondary">⤨</button><button id="prevBtn" class="control">◀</button><button id="playBtn" class="play">▶</button><button id="nextBtn" class="control">▶</button><button id="repeatBtn" class="control secondary">↻</button></div>
+<div class="volume-row"><button id="muteBtn" class="volume-icon">VOL</button><input id="volumeBar" type="range" min="0" max="1" step=".01" value=".72"><span id="volumeValue">72</span></div>
+<div class="console-note"><span>JAVASCRIPT AUDIO ENGINE</span><span>LOCAL SESSION / 01</span></div>
+</section>
+</section>
+
+<aside class="queue" id="queue"><div class="queue-head"><div><span class="tiny-label">YOUR RECORDS</span><h2>Tonight's queue</h2></div><button id="closeQueue">×</button></div><div class="playlist" id="playlist"></div><div class="queue-foot">Use ↑ ↓ to browse · Space to play</div></aside>
+<footer class="footer"><span>NO SIGNAL, JUST SOUND.</span><span>HTML · CSS · JAVASCRIPT</span></footer>
+</main>
+<audio id="audio"></audio><script src="script.js"></script>
+</body></html>
